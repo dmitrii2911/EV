@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <title>3D Vision | Профессиональное создание 3D видеороликов</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -50,6 +50,23 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden md:hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-menu" class="text-gray-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-6 py-8">
+            <a href="#home" class="text-indigo-600 font-medium text-lg">Главная</a>
+            <a href="#services" class="text-gray-600 hover:text-indigo-600 transition text-lg">Услуги</a>
+            <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition text-lg">Портфолио</a>
+            <a href="#pricing" class="text-gray-600 hover:text-indigo-600 transition text-lg">Цены</a>
+            <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition text-lg">Контакты</a>
+            <a href="#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Заказать</a>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 text-white">
@@ -521,124 +538,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Свяжитесь с нами</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Готовы обсудить ваш проект? Оставьте заявку, и мы свяжемся с вами в ближайшее время</p>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
-                <div class="lg:w-1/2">
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 mb-2">Ваше имя</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500" placeholder="Иван Иванов">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 mb-2">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500" placeholder="example@mail.com">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-gray-700 mb-2">Телефон</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500" placeholder="+7 (999) 123-45-67">
-                        </div>
-                        <div>
-                            <label for="service" class="block text-gray-700 mb-2">Услуга</label>
-                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500">
-                                <option value="">Выберите услугу</option>
-                                <option value="3d-animation">3D Анимация</option>
-                                <option value="3d-modeling">3D Моделирование</option>
-                                <option value="3d-videos">3D Видеоролики</option>
-                                <option value="arch-viz">Архитектурная визуализация</option>
-                                <option value="product-viz">Продуктовая визуализация</option>
-                                <option value="game-graphics">Игровая графика</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-2">Опишите ваш проект</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:outline-none focus:border-indigo-500" placeholder="Расскажите о вашем проекте, целях, сроках и пожеланиях..."></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition">Отправить заявку</button>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <div class="bg-indigo-50 p-8 rounded-xl h-full">
-                        <h3 class="text-xl font-bold mb-6">Контактная информация</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-indigo-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Адрес</h4>
-                                    <p class="text-gray-600">г. Москва, ул. Примерная, д. 123, офис 45</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone-alt text-indigo-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Телефон</h4>
-                                    <p class="text-gray-600">+7 (999) 123-45-67</p>
-                                    <p class="text-gray-600">+7 (495) 123-45-67</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-indigo-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Email</h4>
-                                    <p class="text-gray-600">info@3dvision.ru</p>
-                                    <p class="text-gray-600">projects@3dvision.ru</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-clock text-indigo-600"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Режим работы</h4>
-                                    <p class="text-gray-600">Пн-Пт: 9:00 - 18:00</p>
-                                    <p class="text-gray-600">Сб-Вс: выходные</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-bold mb-4">Мы в соцсетях</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
-                                    <i class="fab fa-vk"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
-                                    <i class="fab fa-telegram"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
-                                    <i class="fab fa-behance"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ Section -->
     <section class="py-16 bg-gray-50">
@@ -802,9 +701,27 @@
             });
         });
 
-        // Mobile Menu Toggle (placeholder - would need actual implementation)
-        document.querySelector('.md\\:hidden').addEventListener('click', () => {
-            alert('Мобильное меню будет реализовано в полной версии сайта');
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
         });
 
         // Smooth scrolling for anchor links
