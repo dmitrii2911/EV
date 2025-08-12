@@ -205,14 +205,24 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Portfolio Item 1 -->
-                <div class="portfolio-item relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                    <img src="https://images.unsplash.com/photo-1639762681057-1e71eab1f0b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="3D анимация продукта" class="w-full h-64 object-cover">
-                    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center items-center p-6 text-white">
-                        <h3 class="text-xl font-bold mb-2">Анимация продукта</h3>
-                        <p class="text-center mb-4">360° обзор нового смартфона с демонстрацией функций</p>
-                        <a href="#" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">Подробнее</a>
-                    </div>
-                </div>
+<div class="portfolio-item relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+    <video
+        class="w-full aspect-[16/9] object-cover"
+        src="https://dl.dropboxusercontent.com/scl/fi/b7kyqrcd98vnvw8s223tt/MDS2.mp4?rlkey=4gcs4x58ko0iqq1slh7wcs8b4&dl=0"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    ></video>
+    
+    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center items-center p-6 text-white">
+        <h3 class="text-xl font-bold mb-2">Анимация продукта</h3>
+        <p class="text-center mb-4">360° обзор нового смартфона с демонстрацией функций</p>
+        <a href="#" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition">Подробнее</a>
+    </div>
+</div>
+
                 
                 <!-- Portfolio Item 2 -->
                 <div class="portfolio-item relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
