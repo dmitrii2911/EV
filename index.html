@@ -195,6 +195,27 @@
         </div>
     </section>
 
+    <!-- Модальное окно -->
+<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div class="relative w-full max-w-3xl px-4">
+    <!-- Кнопка закрытия -->
+    <button id="closeModal" class="absolute top-2 right-2 text-white text-2xl font-bold z-10 hover:text-red-400">✕</button>
+    
+    <!-- Видео -->
+    <div class="aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
+      <iframe
+        id="youtubePlayer"
+        class="w-full h-full"
+        src=""
+        title="YouTube video"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-16">
   <div class="container mx-auto px-4">
@@ -213,10 +234,9 @@
       <h3 class="text-xl font-bold mb-2">Анимация продукта</h3>
       <p class="text-center mb-4">360° обзор нового смартфона с демонстрацией функций</p>
       <a 
-      href="https://youtu.be/N_rDbX_NSFk" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  href="#" 
+  class="open-video border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  data-video-id="dQw4w9WgXcQ"
 >
   Подробнее
 </a>
@@ -231,10 +251,9 @@
       <h3 class="text-xl font-bold mb-2">Анимация продукта</h3>
       <p class="text-center mb-4">360° обзор нового смартфона с демонстрацией функций</p>
       <a 
-      href="https://youtu.be/N_rDbX_NSFk" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  href="#" 
+  class="open-video border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  data-video-id="dQw4w9WgXcQ"
 >
   Подробнее
 </a>
@@ -247,10 +266,9 @@
       <h3 class="text-xl font-bold mb-2">Анимация продукта</h3>
       <p class="text-center mb-4">360° обзор нового смартфона с демонстрацией функций</p>
       <a 
-      href="https://youtu.be/N_rDbX_NSFk" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  href="#" 
+  class="open-video border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  data-video-id="dQw4w9WgXcQ"
 >
   Подробнее
 </a>
@@ -263,10 +281,9 @@
       <h3 class="text-xl font-bold mb-2">Анимация продукта</h3>
       <p class="text-center mb-4">360° обзор нового смартфона с демонстрацией функций</p>
       <a 
-      href="https://youtu.be/N_rDbX_NSFk" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  href="#" 
+  class="open-video border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+  data-video-id="dQw4w9WgXcQ"
 >
   Подробнее
 </a>
@@ -803,5 +820,36 @@
     ></model-viewer>
 
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <script>
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('youtubePlayer');
+  const closeBtn = document.getElementById('closeModal');
+
+  // Открытие модального окна
+  document.querySelectorAll('.open-video').forEach(button => {
+    button.addEventListener('click', e => {
+      e.preventDefault();
+      const videoId = button.getAttribute('data-video-id');
+      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      modal.classList.remove('hidden');
+    });
+  });
+
+  // Закрытие по кнопке
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    player.src = '';
+  });
+
+  // Закрытие по клику вне видео
+  modal.addEventListener('click', e => {
+    if (!e.target.closest('iframe') && !e.target.closest('button')) {
+      modal.classList.add('hidden');
+      player.src = '';
+    }
+  });
+</script>
+
 </body>
 </html>
