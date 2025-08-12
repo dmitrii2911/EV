@@ -228,20 +228,21 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-[25px]">
   <!-- Portfolio Item 1 -->
-  <div class="portfolio-item relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-    <video class="absolute inset-0 w-full h-full object-cover" src="https://dl.dropboxusercontent.com/scl/fi/nswmtugijyfoxyjvxgmrb/Extroel.mp4?rlkey=isl2bzsviw9q49igux7iaf719&dl=0" autoplay muted loop playsinline preload="metadata"></video>
-    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center items-center p-6 text-white">
-      <h3 class="text-xl font-bold mb-2">Катализатор дожига EXTROEL</h3>
-      <p class="text-center mb-4">3D графика</p>
-      <a 
-  href="#" 
-  class="open-video border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
-  data-video-id="yEnw_hQqWkM"
->
-  Подробнее
-</a>
-    </div>
-  </div>
+    <div class="portfolio-item relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer">
+        <video class="absolute inset-0 w-full h-full object-cover z-0" src="https://dl.dropboxusercontent.com/scl/fi/nswmtugijyfoxyjvxgmrb/Extroel.mp4?rlkey=isl2bzsviw9q49igux7iaf719&dl=0" autoplay muted loop playsinline preload="metadata"></video>
+
+        <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center items-center p-6 text-white opacity-0 md:opacity-0 md:hover:opacity-100 transition-opacity z-10 pointer-events-none md:pointer-events-auto">
+          <h3 class="text-xl font-bold mb-2">Катализатор дожига EXTROEL</h3>
+          <p class="text-center mb-4">3D графика</p>
+          <a 
+            href="#" 
+            class="open-video border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-600 transition"
+            data-video-id="yEnw_hQqWkM"
+          >
+            Подробнее
+          </a>
+        </div>
+      </div>
 
   <!-- Повторите этот блок 7 раз с разными данными -->
         <!-- Portfolio Item 2 -->
@@ -349,12 +350,44 @@
 </a>
     </div>
   </div>
-</div>
-
-                
-               
+</div>      
     </section>
 
+
+<!-- JS для мобильного взаимодействия -->
+<script>
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+  if (isMobile) {
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation(); // Не даём всплыть до body
+
+        // Скрыть все overlay
+        document.querySelectorAll('.portfolio-overlay').forEach(overlay => {
+          overlay.classList.add('opacity-0');
+          overlay.classList.remove('opacity-100');
+          overlay.classList.add('pointer-events-none');
+        });
+
+        // Показать overlay текущего элемента
+        const overlay = item.querySelector('.portfolio-overlay');
+        overlay.classList.remove('opacity-0');
+        overlay.classList.add('opacity-100');
+        overlay.classList.remove('pointer-events-none');
+      });
+    });
+
+    // Закрытие при тапе вне блока
+    document.body.addEventListener('click', () => {
+      document.querySelectorAll('.portfolio-overlay').forEach(overlay => {
+        overlay.classList.add('opacity-0');
+        overlay.classList.remove('opacity-100');
+        overlay.classList.add('pointer-events-none');
+      });
+    });
+  }
+</script>
     <!-- Pricing Section -->
     <section id="pricing" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
