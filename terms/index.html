@@ -1,4 +1,60 @@
-Условия использования
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Политика конфиденциальности</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fas fa-cube text-indigo-600 text-2xl mr-2"></i>
+        <span class="text-xl font-bold text-indigo-600">EkatVIDEO</span>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="/" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Главная</a>
+        <a href="/#services" class="text-gray-600 hover:text-indigo-600 transition">Услуги</a>
+        <a href="/#portfolio" class="text-gray-600 hover:text-indigo-600 transition">Портфолио</a>
+        <a href="/#pricing" class="text-gray-600 hover:text-indigo-600 transition">Цены</a>
+        <a href="/#contact" class="text-gray-600 hover:text-indigo-600 transition">Контакты</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <div class="hidden md:block">
+        <a href="/#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Заказать</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden md:hidden">
+    <div class="flex justify-end p-4">
+      <button id="close-menu" class="text-gray-600">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center space-y-6 py-8">
+      <a href="/" class="text-indigo-600 font-medium text-lg">Главная</a>
+      <a href="/#services" class="text-gray-600 hover:text-indigo-600 transition text-lg">Услуги</a>
+      <a href="/#portfolio" class="text-gray-600 hover:text-indigo-600 transition text-lg">Портфолио</a>
+      <a href="/#pricing" class="text-gray-600 hover:text-indigo-600 transition text-lg">Цены</a>
+      <a href="/#contact" class="text-gray-600 hover:text-indigo-600 transition text-lg">Контакты</a>
+      <a href="/#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Заказать</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main class="pt-28 pb-16 px-4 max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold text-indigo-600 mb-6">Условия использования</h1>
+    <p class="mb-4">
 Настоящие Условия использования регулируют порядок взаимодействия пользователей с сайтом www.ekatvideo.ru  и предоставляемыми на нём услугами. Посещая сайт, вы соглашаетесь с данными условиями.
 1. Общие положения
 Сайт EkatVIDEO предоставляет информацию о 3D видеопродукции, визуализации, анимации и других услугах, связанных с цифровым контентом. Вся информация на сайте носит ознакомительный характер и не является публичной офертой.
@@ -11,3 +67,69 @@
 5. Изменения условий
 Оператор оставляет за собой право изменять настоящие Условия использования без предварительного уведомления. Актуальная версия всегда доступна по адресу: https://www.ekatvideo.ru/terms/
 Дата последнего обновления: 13 августа 2025 г.
+          </p>
+    <button onclick="window.location.href='/'" class="mt-6 bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">
+      ⬅ Вернуться на главную
+    </button>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <i class="fas fa-cube text-indigo-500 text-2xl mr-2"></i>
+            <span class="text-xl font-bold">EkatVIDEO</span>
+          </div>
+          <p class="text-gray-400 mb-4">Профессиональное создание 3D видеороликов любой сложности для бизнеса и творческих проектов.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-vk"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Услуги</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">3D Анимация</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">3D Моделирование</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">3D Видеоролики</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Архитектурная визуализация</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Продуктовая визуализация</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Компания</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">О нас</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Портфолио</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Цены</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Блог</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Контакты</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-indigo-500"></i>
+              <span>г. Екатеринбург, ул. Ленина, д. 41</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-indigo-500"></i>
+              <span>+7 (982) 67-22-998</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-indigo-500"></i>
+              <span>ekatvideo@mail.ru</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock mr-3 text-indigo-500"></i>
+              <span>Пн-Пт: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12
