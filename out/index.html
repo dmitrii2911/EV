@@ -7,6 +7,53 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-cube text-indigo-600 text-2xl mr-2"></i>
+                <span class="text-xl font-bold text-indigo-600">EkatVIDEO</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Главная</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition">Услуги</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition">Портфолио</a>
+                <a href="#portfolio2" class="text-gray-600 hover:text-indigo-600 transition">Уличные экраны</a>
+                <!--<a href="#pricing" class="text-gray-600 hover:text-indigo-600 transition">Цены</a>-->
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition">Контакты</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Заказать</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden md:hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-menu" class="text-gray-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-6 py-8">
+            <a href="#home" class="text-indigo-600 font-medium text-lg">Главная</a>
+            <a href="#services" class="text-gray-600 hover:text-indigo-600 transition text-lg">Услуги</a>
+            <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition text-lg">Портфолио</a>
+            <a href="#portfolio2" class="text-gray-600 hover:text-indigo-600 transition text-lg">Уличные экраны</a>
+            <!--<a href="#pricing" class="text-gray-600 hover:text-indigo-600 transition text-lg">Цены</a>-->
+            <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition text-lg">Контакты</a>
+            <a href="#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Заказать</a>
+        </nav>
+    </div>
+  
 <body class="bg-gray-50 text-gray-800">
 
 <!-- HERO -->
