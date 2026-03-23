@@ -223,7 +223,7 @@
     <button id="closeModal" class="absolute top-2 right-8 text-white text-2xl font-bold z-10 hover:text-red-400">✕</button>
     
     <!-- Видео -->
-    <div class="aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
+    <!--<div class="aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
       <iframe
         id="youtubePlayer"
         class="w-full h-full"
@@ -235,7 +235,7 @@
       ></iframe>
     </div>
   </div>
-</div>
+</div>-->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-16">
@@ -937,25 +937,25 @@
         });
     </script>
     <script>
-  const modal = document.getElementById('videoModal');
-  const player = document.getElementById('youtubePlayer');
-  const closeBtn = document.getElementById('closeModal');
+  //const modal = document.getElementById('videoModal');
+  //const player = document.getElementById('youtubePlayer');
+  //const closeBtn = document.getElementById('closeModal');
 
   // Открытие модального окна
-  document.querySelectorAll('.open-video').forEach(button => {
-    button.addEventListener('click', e => {
-      e.preventDefault();
-      const videoId = button.getAttribute('data-video-id');
-      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-      modal.classList.remove('hidden');
-    });
-  });
+  //document.querySelectorAll('.open-video').forEach(button => {
+    //button.addEventListener('click', e => {
+      //e.preventDefault();
+      //const videoId = button.getAttribute('data-video-id');
+      //player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      //modal.classList.remove('hidden');
+    //});
+  //});
 
   // Закрытие по кнопке
-  closeBtn.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    player.src = '';
-  });
+  //closeBtn.addEventListener('click', () => {
+    //modal.classList.add('hidden');
+    //player.src = '';
+  //});
 
   // Закрытие по клику вне видео
   modal.addEventListener('click', e => {
